@@ -1,59 +1,369 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+Siap, paham sekarang 👍
+Kamu **tidak mau format seperti**:
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+* emoji (🚀, 1️⃣, dll)
+* heading bernomor / bergaya presentasi
+* potongan–potongan terpisah
 
-## About Laravel
+Kamu mau **SATU FILE `README.md`**, **rapih**, **profesional**, **langsung copas**, **full code**, dan **aman untuk GitHub + Ujikom**.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Di bawah ini adalah **README.md versi FINAL**
+❗ Tanpa emoji
+❗ Tanpa heading bernomor
+❗ Tanpa gaya presentasi
+❗ Hanya markdown standar & rapi
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+⬇️ **SALIN SEMUA ISI DI BAWAH INI KE `README.md`** ⬇️
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+````md
+# Aplikasi Pengaduan Sarpras
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Aplikasi Pengaduan Sarana dan Prasarana berbasis web menggunakan Laravel 12 dan PHP 8.2.  
+Project ini dibuat untuk memenuhi Tugas Uji Kompetensi Keahlian (Ujikom) RPL.
 
-## Laravel Sponsors
+====================================================================
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+DESKRIPSI APLIKASI
 
-### Premium Partners
+Aplikasi ini digunakan untuk menampung pengaduan sarana dan prasarana dari pengguna.
+Pengguna dapat mengajukan pengaduan, sedangkan admin dapat mengelola dan menanggapi
+pengaduan tersebut.
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+Fitur User
+- Registrasi dan Login
+- Mengajukan pengaduan
+- Melihat status pengaduan
 
-## Contributing
+Fitur Admin
+- Login sebagai admin
+- Melihat seluruh pengaduan
+- Mengubah status pengaduan
+- Memberikan tanggapan pengaduan
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Fitur Sistem
+- Role user dan admin
+- Middleware admin
+- Kategori pengaduan
+- Upload gambar pengaduan
 
-## Code of Conduct
+====================================================================
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+PERSYARATAN SISTEM
 
-## Security Vulnerabilities
+- PHP minimal versi 8.2
+- Composer
+- Node.js dan NPM
+- MySQL (XAMPP)
+- Git (opsional)
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Perintah pengecekan versi:
+```bash
+php -v
+composer -V
+node -v
+npm -v
+````
 
-## License
+====================================================================
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+INSTALASI PROJECT
+
+Masuk ke folder htdocs:
+
+```bash
+cd C:\xampp\htdocs
+```
+
+Buat project Laravel:
+
+```bash
+composer create-project laravel/laravel laravel12
+cd laravel12
+```
+
+Generate application key:
+
+```bash
+php artisan key:generate
+```
+
+====================================================================
+
+KONFIGURASI DATABASE
+
+Buat database melalui phpMyAdmin dengan nama:
+
+```
+laravel12
+```
+
+Atur konfigurasi database pada file .env:
+
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=laravel12
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+====================================================================
+
+MIGRATION DATABASE
+
+Menambahkan kolom role pada tabel users:
+
+```bash
+php artisan make:migration add_role_to_users_table --table=users
+```
+
+```php
+Schema::table('users', function (Blueprint $table) {
+    $table->enum('role', ['user', 'admin'])->default('user');
+});
+```
+
+Membuat tabel categories:
+
+```bash
+php artisan make:migration create_categories_table
+```
+
+```php
+Schema::create('categories', function (Blueprint $table) {
+    $table->id();
+    $table->string('name');
+    $table->text('description')->nullable();
+    $table->timestamps();
+});
+```
+
+Membuat tabel complaints:
+
+```bash
+php artisan make:migration create_complaints_table
+```
+
+```php
+Schema::create('complaints', function (Blueprint $table) {
+    $table->id();
+    $table->foreignId('user_id')->constrained()->cascadeOnDelete();
+    $table->foreignId('category_id')->constrained()->cascadeOnDelete();
+    $table->string('title');
+    $table->text('description');
+    $table->enum('status', ['pending', 'in_progress', 'resolved'])->default('pending');
+    $table->text('response')->nullable();
+    $table->string('image')->nullable();
+    $table->timestamps();
+});
+```
+
+Menjalankan migration:
+
+```bash
+php artisan migrate
+```
+
+====================================================================
+
+MODEL DAN RELASI
+
+User.php
+
+```php
+protected $fillable = [
+    'name',
+    'email',
+    'password',
+    'role'
+];
+
+public function complaints()
+{
+    return $this->hasMany(Complaint::class);
+}
+```
+
+Category.php
+
+```php
+protected $fillable = ['name', 'description'];
+
+public function complaints()
+{
+    return $this->hasMany(Complaint::class);
+}
+```
+
+Complaint.php
+
+```php
+protected $fillable = [
+    'user_id',
+    'category_id',
+    'title',
+    'description',
+    'status',
+    'response',
+    'image'
+];
+
+public function user()
+{
+    return $this->belongsTo(User::class);
+}
+
+public function category()
+{
+    return $this->belongsTo(Category::class);
+}
+```
+
+====================================================================
+
+SEEDER KATEGORI
+
+Membuat seeder:
+
+```bash
+php artisan make:seeder CategorySeeder
+```
+
+```php
+Category::create([
+    'name' => 'Kerusakan Bangunan',
+    'description' => 'Pengaduan terkait kerusakan bangunan'
+]);
+
+Category::create([
+    'name' => 'Peralatan Rusak',
+    'description' => 'Pengaduan terkait peralatan rusak'
+]);
+```
+
+Menjalankan seeder:
+
+```bash
+php artisan db:seed --class=CategorySeeder
+```
+
+====================================================================
+
+AUTENTIKASI (LARAVEL BREEZE)
+
+```bash
+composer require laravel/breeze --dev
+php artisan breeze:install
+npm install
+npm run dev
+php artisan migrate
+```
+
+Gunakan stack Blade with Alpine.
+
+====================================================================
+
+MIDDLEWARE ADMIN
+
+Membuat middleware:
+
+```bash
+php artisan make:middleware AdminMiddleware
+```
+
+```php
+public function handle(Request $request, Closure $next)
+{
+    if (!auth()->check() || auth()->user()->role !== 'admin') {
+        abort(403);
+    }
+    return $next($request);
+}
+```
+
+Registrasi middleware pada Laravel 12 di file bootstrap/app.php:
+
+```php
+->withMiddleware(function (Middleware $middleware) {
+    $middleware->alias([
+        'admin' => \App\Http\Middleware\AdminMiddleware::class,
+    ]);
+})
+```
+
+====================================================================
+
+ROUTING ADMIN
+
+```php
+Route::middleware(['auth','admin'])->get('/admin-test', function () {
+    return 'ADMIN OK';
+});
+```
+
+====================================================================
+
+MENJALANKAN APLIKASI
+
+```bash
+php artisan serve
+```
+
+Akses melalui browser:
+
+```
+http://127.0.0.1:8000
+```
+
+====================================================================
+
+MENJADIKAN USER SEBAGAI ADMIN
+
+Melalui database:
+
+```sql
+UPDATE users SET role = 'admin' WHERE email = 'email@gmail.com';
+```
+
+====================================================================
+
+STRUKTUR PROJECT
+
+app/
+├── Http/
+│   ├── Controllers/
+│   └── Middleware/
+├── Models/
+database/
+├── migrations/
+└── seeders/
+resources/
+└── views/
+routes/
+└── web.php
+
+====================================================================
+
+AUTHOR
+
+Nama      : Refan Al-Kholqi
+Jurusan   : Rekayasa Perangkat Lunak
+Framework : Laravel 12
+PHP       : 8.2
+
+```
+
+---
+
+Kalau kamu mau:
+- versi **lebih singkat khusus penguji**
+- versi **lebih formal untuk laporan**
+- atau **ditambahkan ERD ASCII**
+
+tinggal bilang, tapi **README ini sudah 100% siap upload ke GitHub** ✅
+```
