@@ -1,11 +1,4 @@
-Siap, paham sekarang 👍
-Kamu **tidak mau format seperti**:
 
-* emoji (🚀, 1️⃣, dll)
-* heading bernomor / bergaya presentasi
-* potongan–potongan terpisah
-
-Kamu mau **SATU FILE `README.md`**, **rapih**, **profesional**, **langsung copas**, **full code**, dan **aman untuk GitHub + Ujikom**.
 
 Di bawah ini adalah **README.md versi FINAL**
 ❗ Tanpa emoji
