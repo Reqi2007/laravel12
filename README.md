@@ -1,17 +1,5 @@
 
 
-Di bawah ini adalah **README.md versi FINAL**
-❗ Tanpa emoji
-❗ Tanpa heading bernomor
-❗ Tanpa gaya presentasi
-❗ Hanya markdown standar & rapi
-
----
-
-⬇️ **SALIN SEMUA ISI DI BAWAH INI KE `README.md`** ⬇️
-
----
-
 ````md
 # Aplikasi Pengaduan Sarpras
 
